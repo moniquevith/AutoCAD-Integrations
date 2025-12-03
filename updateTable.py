@@ -29,14 +29,16 @@ for f in files:
                     break
             if target_table:
                 target_table.SetText(1, 1, "Hello") # add text
-                target_table.SetText(2, 1, "World")
-                target_table.SetText(2, 2, "World")
+                target_table.SetTextHeight(1, 40) # change font size to 40. (row, font size)
 
-                target_table.SetTextHeight(1, 40) # change font size to 40
+                target_table.SetText(2, 1, "World")
+                target_table.SetTextHeight(2, 40) # change font size to 40. (row, font size)
 
                 target_table.SetAlignment(1, 5) # middle centre align (5th selection)
+                target_table.SetAlignment(1, 5) # middle centre align (5th selection)
+
                 target_table.Update()
-    doc.SaveAs(f)
+    # doc.SaveAs(f)
     
 if not target_table:
     print("No table with 'test table' in header row found.")
